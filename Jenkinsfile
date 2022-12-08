@@ -1,7 +1,7 @@
 node {
    def mvnHome
   stage('Prepare') {
-      git url: 'https://github.com/kesavkummari/javacodescan.git', branch: 'main'
+      git url: 'https://github.com/Souvagyadas/Javacodescan.git', branch: 'main'
       mvnHome = tool 'maven'
    }
   stage ('Code Quality') {
@@ -30,9 +30,9 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
   }
   stage ('Deliver & Deployment') {
-      sh 'curl -u admin:redhat@123 -T target/**.war "http://3.87.125.112:8080/manager/text/deploy?path=/kesav&update=true"'
+      sh 'curl -u admin:redhat@123 -T target/**.war "http://20.244.37.36:8080/manager/text/deploy?path=/souvagya&update=true"'
   }
   stage ('SmokeTest') {
-      sh 'curl --retry-delay 10 --retry 5 "http://3.87.125.112:8080/kesav"'
+      sh 'curl --retry-delay 10 --retry 5 "http://20.244.37.36:8080/souvagya"'
   }
 }
