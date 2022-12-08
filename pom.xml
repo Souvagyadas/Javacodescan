@@ -27,10 +27,10 @@
 		<jacoco.version>0.7.9</jacoco.version>
 		
 		<!-- SonarQube Integration -->
-		<sonar.organization>kummari</sonar.organization>
-		<sonar.projectKey>staropscenter</sonar.projectKey>
+		<sonar.organization>souvagyadas</sonar.organization>
+		<sonar.projectKey>javacodeproject</sonar.projectKey>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
-		<sonar.login>fd7ddeeb1b853985e1f77872d0e65dffb83d0b0e</sonar.login>
+		<sonar.login>e27345a6f84a74b5d67aa4fa1bd830d07fcba9e4</sonar.login>
 	</properties>
 	
 	<!-- Jfrog Integration with POM.xml file -->
