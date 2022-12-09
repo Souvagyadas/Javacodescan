@@ -19,19 +19,19 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore compile"
   }
   stage ('Test') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test -DskipTests"
   }
   stage ('Package') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore package -DskipTests"
   }
   stage ('Verify') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify -DskipTests"
   }
   stage ('Install') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore install -DskipTests"
   }
      stage ('deploy') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore deploy"
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore deploy -DskipTests"
   }
 
   stage ('Deliver & Deployment') {
