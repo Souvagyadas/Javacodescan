@@ -35,15 +35,10 @@
 	
 	<!-- Jfrog Integration with POM.xml file -->
 <distributionManagement>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>example-repo-local</name>
-        <url>https://cloudbinary.jfrog.io/artifactory/example-repo-local/</url>
-    </snapshotRepository>
     <repository>
-        <id>example-repo-local</id>
-        <name>example-repo-local</name>
-        <url>https://cloudbinary.jfrog.io/artifactory/example-repo-local/</url>
+        <id>central</id>
+        <name>a0y5xptopufiw-artifactory-primary-0-releases</name>
+        <url>https://souvagya.jfrog.io/artifactory/libs-release</url>
     </repository>
 </distributionManagement>
 
